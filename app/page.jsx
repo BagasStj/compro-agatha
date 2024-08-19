@@ -85,7 +85,7 @@ export default function Home() {
           <img src="/vision.svg" alt="Icon" className="inline-block ml-2" />
         </h2>
         <p className="text-2xl mb-8 mt-8">
-          "To provide innovative solutions that empower businesses and individuals to achieve maximum efficiency and sustainable progress, with the ability for users to create and customize their own workflows."
+          &quot;To provide innovative solutions that empower businesses and individuals to achieve maximum efficiency and sustainable progress, with the ability for users to create and customize their own workflows.&quot;
         </p>
         <h2 className="text-2xl font-bold mb-4 mt-40">
           <img src="/mission.svg" alt="Icon" className="inline-block ml-2" />
@@ -225,7 +225,7 @@ export default function Home() {
       <section id="testi" className="background-testi p-5 bg-black text-white mt-20 mb-60 fade-in">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="testimonial-card bg-white text-black p-6 rounded-lg shadow-md">
-            <p className="mb-1 text-center">“I've been using this web hosting service for a few months now and overall it's been fine. The uptime has been good and I haven't had any major issues.”</p>
+            <p className="mb-1 text-center">&quot;I&apos;ve been using this web hosting service for a few months now and overall it&apos;s been fine. The uptime has been good and I haven&apos;t had any major issues.&quot;</p>
             <div className="flex justify-center mt-40 mb-4">
               <span className="text-[#7A58FF] text-xl">
                 <i className="fas fa-star"></i>
@@ -243,7 +243,7 @@ export default function Home() {
           </div>
 
           <div className="testimonial-card bg-white text-black p-9 rounded-lg shadow-md">
-            <p className="mb-20 text-center">“The pricing is also reasonable. Nothing particularly stands out as exceptional, but it gets the job done.”</p>
+            <p className="mb-20 text-center">&quot;The pricing is also reasonable. Nothing particularly stands out as exceptional, but it gets the job done.&quot;</p>
             <div className="flex justify-center mt-40 mb-4">
               <span className="mt-5 text-[#7A58FF] text-xl">
               <i className="fas fa-star"></i>
@@ -261,7 +261,7 @@ export default function Home() {
           </div>
 
           <div className="testimonial-card bg-white text-black p-6 rounded-lg shadow-md">
-            <p className="mb-4 text-center">“My website has gone down multiple times and the customer service has been unresponsive. I would not recommend this company.”</p>
+            <p className="mb-4 text-center">&quot;My website has gone down multiple times and the customer service has been unresponsive. I would not recommend this company.&quot;</p>
             <div className="flex justify-center mt-40 mb-4">
               <span className="text-[#7A58FF] text-xl">
               <i className="fas fa-star"></i>
