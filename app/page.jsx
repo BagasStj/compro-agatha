@@ -205,7 +205,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-start justify-center p-4">
             <h3 className="text-3xl font-bold mt-4 mb-2 text-left mb-5">User-Friendliness</h3>
-            <p className="text-left">The intuitive interface makes it easy for all users, even without a technical background, to take full advantage of our application's capabilities.</p>
+            <p className="text-left">The intuitive interface makes it easy for all users, even without a technical background, to take full advantage of our application&apos;s capabilities.</p>
             <div className="border-b-2 border-white p-4 w-full"></div>
           </div>
           <div className="flex flex-col items-start justify-center p-4">
