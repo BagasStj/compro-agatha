@@ -11,192 +11,52 @@
 }
 
 html, body {
-    background-color: #1A1A1A;
+    background-color: #232323;
     font-family: 'Monument Extended';
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-
 }
 
-.svg-small{
+.image-contrainer{
+  display: flex;
+}
+
+.image-item {
+  margin-right: 10px;
+}
+
+/* Remove unnecessary margins for sections */
+section {
+    background-color: transparent; /* Ensure background is transparent */
+    color: #FFFFFF;
+    padding: 1.25rem; /* Adjust padding as needed */
+    margin-top: 0; /* Reset margin-top */
+    margin-bottom: 0; /* Reset margin-bottom */
+}
+
+.svg-small {
     width: 500px;
     height: auto;
 }
 
-/* Welcome to, AGATHA */
-.h {
-    font-family: 'Monument Extended';
-    font-style: normal;
-    font-weight: 800; /* Untuk teks bold */
-    font-size: 60px;
-    line-height: 1.2; /* Menyesuaikan line-height */
-    color: #FFFFFF;
-    margin-bottom: 10px;
+/* Specific class for Hero Section */
+.hero-section {
+    padding: 2rem; /* Adjust padding for Hero Section */
 }
 
-.agatha {
-    font-family: 'Monument Extended';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 1.2;
-    color: #1E90FF; /* Warna biru untuk AGATHA */
-    margin-top: 0; /* Menghapus margin atas agar lebih dekat dengan "Welcome to" */
-}  
-
-.adaptive {
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
-    margin-top: 5px;
-    margin-bottom: 20px; /* Spasi antara teks adaptive dan tombol */
+/* Specific class for Guide Section */
+.guide-section {
+    padding: 2rem; /* Adjust padding for Guide Section */
 }
 
-.welcome-text {
-    display: block;
-    width: 100%;
-    margin-left: 0; /* Memastikan teks berada di kiri */
-}
-
-.try-button {
-    margin-top: 80px;
-    display: inline-block;
-    padding: 12px 24px; /* Mengatur padding agar tombol lebih besar */
-    background-color: #1937D6; /* Warna latar belakang tombol */
-    color: #FFFFFF; /* Warna teks */
-    text-align: center;
-    font-size: 16px; /* Ukuran font */
-    font-weight: 600; /* Ketebalan font */
-    text-transform: uppercase; /* Teks menjadi huruf besar */
-    border-radius: 5px; /* Kurangi radius untuk bentuk lebih persegi */
-    border: none; /* Menghilangkan border */
-    cursor: pointer;
-    text-decoration: none; /* Menghilangkan underline pada link */
-}
-
-/* Section for Robot and Background */
-.robot-container {
-    position: relative; /* Parent element to position child elements */
-    width: 900px;
-}
-
-/* Background Image Behind Robot */
-.background-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the background image */
-    z-index: 1; /* Place it behind the robot */
-    width: 100%; /* Sesuaikan ukuran sesuai kebutuhan */
-    height: auto;
-}
-
-/* Robot Image */
-.robot-image{
-    position: relative;
-    width: 100%; /* Sesuaikan ukuran gambar */
-    max-width: 900px; /* Atur lebar maksimum */
-    height: auto; /* Menjaga proporsi tinggi */
-    z-index: 2; /* Pastikan berada di atas background */
-    margin: 0 auto; /* Tengah di dalam container */
-    display: block; /* Menjaga gambar sebagai blok untuk margin otomatis */
-}
-
-/* Responsif untuk layar lebih kecil */
-@media (max-width: 768px) {
-    .h {
-        font-size: 40px; /* Mengecilkan ukuran font pada layar lebih kecil */
-    }
-
-    .agatha {
-        font-size: 40px; /* Mengecilkan ukuran font pada layar lebih kecil */
-    }
-
-    .welcome-text, .robot-container {
-        text-align: center;
-    }
-
-    .robot-container {
-        width: 100%; /* Membuat container mengambil seluruh lebar layar */
-        width: 500px;
-    }
-
-    .background-image {
-        width: 100%; /* Background image juga memenuhi lebar layar pada tampilan mobile */
-        
-    }
-
-    .robot-image img {
-        width: 100%; /* Gambar memenuhi lebar layar pada tampilan mobile */
-        right: 50%;
-    }
-    .page-break{
-        page-break-before: always;
-    }
-}
-
-.features-section {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    background-image: url('/features.svg'); /* Update with your SVG file path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.testimonial-container {
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .testimonials {
-    display: flex;
-    animation: scroll 15s linear infinite;
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  .background-testi{
-    background-color: #1A1A1A;
-  }
-
-  .testimonial-card {
-    background-color: #FFFFFF; /* Latar belakang putih untuk card testimoni */
-    color: #1A1A1A; /* Teks hitam */
-    padding: 1.5rem; /* Pastikan padding sesuai */
-    border-radius: 0.5rem; /* Radius sudut yang konsisten */
-  }
-  
-  /* Optional: untuk memastikan background section */
-  section {
-    background-color: #1A1A1A; /* Latar belakang hitam untuk section */
-    color: #FFFFFF; /* Teks putih untuk section */
-    padding: 1.25rem; /* Padding */
-    margin-top: 5rem; /* Sesuaikan margin atas */
-    margin-bottom: 15rem; /* Sesuaikan margin bawah */
-  }
-  .testimonial-track{
-    display: flex;
-    transition: transform 1s ease;
-  }
-
-  .transparent-svg {
+.transparent-svg {
     background-color: transparent;
-    width: 1550px; /* Atur lebar sesuai keinginan */
-    height: 400px; /* Atur tinggi sesuai keinginan */
+    width: 1550px;
+    height: 400px;
 }
 
-.svg-large{
+.svg-large {
     width: 80%;
     max-width: 800px;
     height: auto;
@@ -204,98 +64,97 @@ html, body {
 
 .fade-in {
     opacity: 0;
-    transform: translateY(20px); /* Atur sesuai kebutuhan */
+    transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-  
-  .fade-in.visible {
+}
+
+.fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 
-  @keyframes slideInFromRight {
+@keyframes slideInFromRight {
     from {
-      transform: translateX(100%);
-      opacity: 0;
+        transform: translateX(100%);
+        opacity: 0;
     }
     to {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
-  
-  /* Animasi muncul dari kiri */
-  @keyframes slideInFromLeft {
+}
+
+@keyframes slideInFromLeft {
     from {
-      transform: translateX(-100%);
-      opacity: 0;
+        transform: translateX(-100%);
+        opacity: 0;
     }
     to {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
-  
-  @keyframes slide-in-left {
+}
+
+@keyframes slide-in-left {
     0% {
-      transform: translateX(-100%);
-      opacity: 0;
+        transform: translateX(-100%);
+        opacity: 0;
     }
     100% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
-  
-  @keyframes slide-in-right {
+}
+
+@keyframes slide-in-right {
     0% {
-      transform: translateX(100%);
-      opacity: 0;
+        transform: translateX(100%);
+        opacity: 0;
     }
     100% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
-  
-  @keyframes slide-out-left {
+}
+
+@keyframes slide-out-left {
     0% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
     100% {
-      transform: translateX(-100%);
-      opacity: 0;
+        transform: translateX(-100%);
+        opacity: 0;
     }
-  }
-  
-  @keyframes slide-out-right {
+}
+
+@keyframes slide-out-right {
     0% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
     100% {
-      transform: translateX(100%);
-      opacity: 0;
+        transform: translateX(100%);
+        opacity: 0;
     }
-  }
-  
-  .slide-in-left {
+}
+
+.slide-in-left {
     animation: slide-in-left 1s ease-out;
-  }
-  
-  .slide-in-right {
+}
+
+.slide-in-right {
     animation: slide-in-right 1s ease-out;
-  }
-  
-  .slide-out-left {
+}
+
+.slide-out-left {
     animation: slide-out-left 1s ease-in;
-  }
-  
-  .slide-out-right {
+}
+
+.slide-out-right {
     animation: slide-out-right 1s ease-in;
-  }
-  
-  .slide-in, .slide-out {
+}
+
+.slide-in, .slide-out {
     opacity: 0;
-  }
+}

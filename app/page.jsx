@@ -1,43 +1,17 @@
 "use client";
-import React, { useEffect } from 'react';
 import Image from 'next/image';
+import React from 'react';
 
 export default function Home() {
-  useEffect(() => {
-    const fadeElements = document.querySelectorAll('.fade-in');
-
-    const handleScroll = () => {
-      fadeElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
-        if (isInView) {
-          el.classList.add('visible');
-        } else {
-          el.classList.remove('visible');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <div className="min-h-screen text-white font-sans">
+    <div className="flex flex-col min-h-screen bg-transparent text-white font-sans">
       {/* Hero Section */}
-      <section id="home" className="flex flex-col md:flex-row items-center justify-between p-25 mt-40 fade-in">
-        <div className="welcome-text">
-          <img src="/welcome.svg" alt="Welcome to AGATHA" className="svg-large" />
-          <a href="#" className="try-button bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700">
-            Try It For Free
-            <i className="fas fa-arrow-right ml-2" style={{ transform: 'rotate(-45deg)', display: 'inline-block' }}></i>
-          </a>
-        </div>
-        <div className="robot-container relative w-full">
+      <section id="home" className="p-8 bg-transparent mt-20">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-4xl font-bold">AI Chat</h1>
+          <p className="mt-10 text-xl">
+            An AI Chat is an advanced tool designed to assist in various tasks related to data visualization and analysis using artificial intelligence. It can automatically generate charts based on data inputs, making it a powerful feature for data-driven projects. The AI Chart can be utilized in numerous industries where data visualization is crucial, including finance, marketing, and research.
+          </p>
           <img
             src="/elipse.svg"
             alt="Lingkaran Detail"
@@ -48,319 +22,125 @@ export default function Home() {
               width: '700px',
               height: '700px',
               transform: 'translate(50%, -50%)',
-              zIndex: 0,
+              zIndex: 1,
             }}
           />
-          <img src="/gambar-about.png" alt="Background" className="robot-image" />
-          <img src="/belakang-robot.png" alt="Robot" className="background-image" />
-        </div>
-      </section>
-
-      {/* Introduction */}
-      <section id="intro" className="p-10 text-center mt-25 fade-in">
-        <h2 className="text-2xl font-bold mb-5 mt-40">
-          <img src="/introduction.svg" alt="Icon" className="inline-block ml-2" />
-        </h2>
-        <p className="text-2xl mt-8">
-          AGATHA (Adaptive Global Artificial Technology Hybrid Automation) is an innovative AI platform that transforms the way businesses operate with artificial intelligence. Designed to deliver adaptive, scalable, and globally applicable solutions, AGATHA improves efficiency and drives innovation across industries. Its focus on user empowerment and automation enables businesses to create AI workflows that fit their unique needs.
-        </p>
-        <img
-            src="/elipse2.svg"
-            alt="Lingkaran Detail"
-            className="absolute"
-            style={{
-              top: '-50%',
-              left: '-5%',
-              width: '700px',
-              height: '700px',
-              transform: 'translate(-50%, 50%)',
-              zIndex: -1,
-            }}
-          />
-      </section>
-
-      {/* Vision & Mission */}
-      <section id="vision-mission" className="text-center fade-in mt-12">
-        <h2 className="text-2xl font-bold mb-4">
-          <img src="/vision.svg" alt="Icon" className="inline-block ml-2" />
-        </h2>
-        <p className="text-2xl mb-8 mt-8">
-          &quot;To provide innovative solutions that empower businesses and individuals to achieve maximum efficiency and sustainable progress, with the ability for users to create and customize their own workflows.&quot;
-        </p>
-        <h2 className="text-2xl font-bold mb-4 mt-40">
-          <img src="/mission.svg" alt="Icon" className="inline-block ml-2" />
-        </h2>
-        <div className="container mt-8 p-6">
-          <div className="flex justify-center space-x-12">
-            <div className="flex flex-col items-center text-center fade-in">
-              <Image src="/commitment.png" alt="Quality" width={67} height={50} />
-              <p className="mt-2">Commitment to quality</p>
-            </div>
-            <div className="flex flex-col items-center text-center fade-in">
-              <Image src="/education.png" alt="Education" width={86} height={50} />
-              <p className="mt-2">Education and training</p>
-            </div>
-            <div className="flex flex-col items-center text-center fade-in">
-              <Image src="/collab.png" alt="Collaboration" width={69} height={60} />
-              <p className="mt-2">Collaboration and partnership</p>
-            </div>
-            <div className="flex flex-col items-center text-center fade-in">
-              <Image src="/innovation.png" alt="Innovation" width={60} height={50} />
-              <p className="mt-2">Cutting edge innovation</p>
-            </div>
-            <div className="flex flex-col items-center text-center fade-in">
-              <Image src="/user.png" alt="User-1" width={95} height={50} />
-              <p className="mt-2">User Empowerment</p>
-            </div>
-            <img
-            src="/elipse.svg"
-            alt="Lingkaran Detail"
-            className="absolute"
-            style={{
-              top: '70%',
-              right: '-5%',
-              width: '700px',
-              height: '700px',
-              transform: 'translate(50%, -50%)',
-              zIndex: 0,
-            }}
-          />
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <h2 id="fitur" className="text-2xl font-bold mb-4 text-center mb-8 mt-40 fade-in">
-        <img src="/feature.svg" alt="Icon" className="inline-block ml-2" />
-      </h2>
-
-      {/* Container untuk fitur-fitur */}
-      <section className="features-section text-center rounded-xl mt-12 mb-5 fade-in">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-start justify-center p-8">
-            <Image src="/chat.png" alt="chat-ai" width={60} height={50} />
-            <h3 className="text-xl font-bold mt-4 mb-2 text-left">Chat AI</h3>
-            <p>Makes it easier to use with the help of AI</p>
-          </div>
-          <div className="flex flex-col items-start justify-center p-8 border-l-2 border-r-2 border-white">
-            <Image src="/flow.png" alt="flow" width={70} height={50} />
-            <h3 className="text-xl font-bold mb-2 mt-1">AI Flow Diagram</h3>
-            <p>Facilitate the creation of flow diagrams with the help of AI</p>
-          </div>
-          <div className="flex flex-col items-start justify-center p-8">
-            <Image src="/phone.png" alt="phone" width={60} height={50} />
-            <h3 className="text-xl font-bold mb-2 mt-2">AI Phone</h3>
-            <p>Can communicate with AI via phone</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Amaze */}
-      <section className="transparent-svg rounded-xl pt-1 fade-in">
-        <div className="container mx-auto bg-transparent">
           <Image
-            src="/amaze.svg"
-            alt="Feature Image"
-            layout="responsive"
-            width={500}
-            height={340}
-            className="transparent-svg"
+            src="/AI-chart.png"
+            alt="Accessing AI Chart"
+            width={900}
+            height={300}
+            className="mt-9" // Adjust margin-top if necessary
           />
-          <img
-            src="/elipse2.svg"
-            alt="Lingkaran Detail"
-            className="absolute"
-            style={{
-              top: '-70%',
-              left: '-5%',
-              width: '700px',
-              height: '700px',
-              transform: 'translate(-50%, 50%)',
-              zIndex: -1,
-              }}
+        </div>
+      </section>
+
+      {/* Guide Section */}
+      <section id="guide" className="p-8 bg-transparent mt-2"> {/* Adjust margin-top for closer positioning */}
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold">Guide to using the AI Chart Feature in Agatha AI</h2>
+
+          {/* Feature Section */}
+          <div className="mt-4 space-y-6"> {/* Adjust spacing as needed */}
+            <div className="p-6 rounded-lg bg-transparent">
+              <ul className="list-disc pl-6 text-2xl font-bold">
+                <li>Accessing the AI Chart Feature</li>
+              </ul>
+              <ol className="list-decimal pl-10  mt-5 text-lg list-item-bold">
+                <li><strong>Open Website: </strong> Access the Agatha Ai website through your browser by visiting&nbsp; 
+                  <a
+                   href="https://agatha-ai-vercel.app" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="text-blue-500 hover:underline"
+                  >
+                    https://agatha-ai-vercel.app
+                  </a>.
+                  </li>
+                <li><strong>Login to Your Account: </strong> If you are not logged in, click the Login button in the top right corner of the page, and enter your credentials.</li>
+                <li><strong>Navigate to Ai Chat: </strong> On the main page, find the AI Chat menu or icon in the navigation or dashboard section.</li>
+              </ol>
+              <Image
+                src="/img-2.svg"
+                alt="Accessing AI Chart"
+                width={850}
+                height={300}
+                className="mt-4"
+              />
+            </div>
+
+            <div id="how-to-use" className="p-6 rounded-lg bg-transparent">
+            <ul className="list-disc pl-6 text-2xl font-bold">
+                <li>How to Use the AI Chat Feature</li>
+              </ul>
+              <ol className="list-decimal pl-10  mt-5 text-lg list-item-bold">
+                <li><strong>Strating a Conversation: </strong>Once you enter the AI Chat page, you will see a chat box on the screen. 
+                Type your question or statemen in the text box provided.</li>
+                <li><strong>Sending a Message: </strong>Press the Enter key or click the Send button to send your message. 
+                The AI will respond within a few second.</li>
+                <li><strong>Viewing a Conversation History: </strong>ALl ongoing conversation will appear in the chat box. you can scroll up to see 
+                previous chat history, and prompt history on the left.</li>
+              </ol>
+            </div>
+
+            <div id="custom" className="p-6 rounded-lg bg-transparent">
+            <ul className="list-disc pl-6 text-2xl font-bold">
+                <li>How to Use Custom Prompt</li>
+              </ul>
+              <Image
+                src="/img-3.svg"
+                alt="Generated Prompt"
+                width={800}
+                height={300}
+                className="mt-4"
+              />
+            <p className="text-lg mt-5">
+               To set a prompt, you can click the button next to &quot;New Chat&quot;, then select &quot;Add new Prompt&quot;
+               and the set the prompt.   
+            </p>  
+            <div style={{ display: 'flex '}}className="mt-8 image-container">
+            <Image
+              src="/custom-1.svg"
+              alt="Generated Prompt"
+              width={450}
+              height={300}
+              className="image-item"
             />
-        </div>
-      </section>
+            <Image
+              src="/custom-2.svg"
+              alt="Generated Prompt"
+              width={480}
+              height={300}
+              className="image-item"
+            />
+            </div>
+            <ol className="list-decimal pl-10  mt-5 text-lg list-item-bold">
+              <li><strong>Title: </strong>Add title to prompt.</li>
+              <li><strong>Prompt: </strong>To set the AI to respond according to what is ordered.</li>
+              <li><strong>Model: </strong>Select the engine model used.</li>
+              <li><strong>Temperature: </strong>Measuring AI awareness, the higher the number the more random the answers generated.</li>
+              <li><strong>Top P: </strong>How accurate in AIR must choose the most relevant word for the answer.</li>
+              <li><strong>Max Token: </strong>The maximum number of token that can be generated by the AI token is a collection
+              of all sentences / word / characters.</li>
+              <li><strong>Pressence Penalty & Frequence Penalty: </strong>
+              Set the model so that it doesn&apos;t&apos; use the same words too often.</li>
+            </ol>
+            
+            </div>
+            <div id="usage-tips" className="p-6 rounded-lg bg-transparent">
+            <ul className="list-disc pl-6 text-2xl font-bold">
+                <li>Usage Tips</li>              
+            </ul>
 
-      {/* Why Choose Us */}
-      <h2 className="text-2xl font-bold mb-8 text-center mt-80 mb-10 fade-in">
-        <img
-          src="/elipse.svg"
-          alt="Lingkaran Detail"
-          className="absolute"
-          style={{
-            top: '500%',
-            right: '-5%',
-            width: '700px',
-            height: '700px',
-            transform: 'translate(50%, -50%)',
-            zIndex: 0,
-            }}
-        />
-        <img src="/choose.svg" alt="Icon" className="inline-block ml-2" />
-      </h2>
-
-      {/* Container */}
-      <section className="features-section rounded-xl mt-8 mb-20 fade-in">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-3xl font-bold mt-4 mb-2 text-left mb-5">User-Friendliness</h3>
-            <p className="text-left">The intuitive interface makes it easy for all users, even without a technical background, to take full advantage of our application&apos;s capabilities.</p>
-            <div className="border-b-2 border-white p-4 w-full"></div>
-          </div>
-          <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-3xl font-bold mt-4 mb-2 text-left mb-5">Superior Intelligence</h3>
-            <p className="text-left">Our AI applications are designed with state-of-the-art technology that can process data quickly and accurately. This allows you to make better and faster decisions.</p>
-            <div className="border-b-2 border-white p-4 w-full"></div>
-          </div>
-          <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-3xl font-bold mt-4 mb-2 text-left mb-5">Security Guaranteed</h3>
-            <p className="text-left">We prioritize your data security by using the latest security protocols that protect your business information from cyber threats.</p>
-            <div className="border-b-2 border-white p-4 w-full"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimoni */}
-      <section id="testi" className="background-testi p-5 bg-black text-white mt-20 mb-60 fade-in">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="testimonial-card bg-white text-black p-6 rounded-lg shadow-md">
-            <p className="mb-1 text-center">&quot;I&apos;ve been using this web hosting service for a few months now and overall it&apos;s been fine. The uptime has been good and I haven&apos;t had any major issues.&quot;</p>
-            <div className="flex justify-center mt-40 mb-4">
-              <span className="text-[#7A58FF] text-xl">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                </span>
-            </div>
-            <div className="flex flex-col items-center mt-50">
-              <Image src="/gb-testi.png" alt="Jane Smith" width={50} height={50} className="rounded-full" />
-              <h4 className="font-bold mt-3">Jane Smith</h4>
-              <p className="text-sm text-gray-500">Freelance Designer</p>
-            </div>
-          </div>
-
-          <div className="testimonial-card bg-white text-black p-9 rounded-lg shadow-md">
-            <p className="mb-20 text-center">&quot;The pricing is also reasonable. Nothing particularly stands out as exceptional, but it gets the job done.&quot;</p>
-            <div className="flex justify-center mt-40 mb-4">
-              <span className="mt-5 text-[#7A58FF] text-xl">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i> 
-              </span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image src="/gb-testi.png" alt="Tom Williams" width={50} height={50} className="rounded-full" />
-              <h4 className="font-bold mt-4">Tom Williams</h4>
-              <p className="text-sm text-gray-500">Software Developer</p>
-            </div>
-          </div>
-
-          <div className="testimonial-card bg-white text-black p-6 rounded-lg shadow-md">
-            <p className="mb-4 text-center">&quot;My website has gone down multiple times and the customer service has been unresponsive. I would not recommend this company.&quot;</p>
-            <div className="flex justify-center mt-40 mb-4">
-              <span className="text-[#7A58FF] text-xl">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              </span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image src="/gb-testi.png" alt="Michael Brown" width={50} height={50} className="rounded-full" />
-              <h4 className="font-bold mt-4">Michael Brown</h4>
-              <p className="text-sm text-gray-500">Entrepreneur</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer id="contact" className="p-10 text-white mt-10 rounded-xl flex-col items-center justify-center" style={{ backgroundColor: '#2d2d2d' }}>
-        <div className="flex flex-wrap justify-center w-full">
-          {/* Kolom 1 */}
-          <div className="flex-1 text-left">
-            <h3 className="text-2xl font-bold">Header</h3>
-            <p className="text-xl mt-4" style={{ maxWidth: '500px' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare cursus sed nunc eget dictum. Sed ornare cursus sed nunc eget dictum.
-            </p>
-          </div>
-          {/* Wrapper untuk kolom 2, 3, dan 4 */}
-          <div className="flex flex-1 justify-between">
-            {/* Kolom 2 */}
-            <div className="text-left">
-              <h3 className="text-2xl font-bold">Header Text</h3>
-              <ul className="mt-4">
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-              </ul>
-            </div>
-            {/* Kolom 3 */}
-            <div className="text-left">
-              <h3 className="text-2xl font-bold">Header Text</h3>
-              <ul className="mt-4">
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-              </ul>
-            </div>
-            {/* Kolom 4 */}
-            <div className="text-left">
-              <h3 className="text-2xl font-bold">Header Text</h3>
-              <ul className="mt-4">
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
+              <ul className="list-decimal list-item-bold pl-10 mt-5 text-lg">
+                <li><strong>Specific Question: </strong>Try to provide clear and spesific questions or instructions to get more accurate answers.</li>
+                <li><strong>Supported Languages: </strong>You can communicate in multiple languanges, but best results are usually obtained when
+                using English or Indonesian.</li>
               </ul>
             </div>
           </div>
         </div>
-      </footer>
+      </section>
     </div>
   );
 }
