@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar"; // Ensure this path is correct
-import SidebarMenu from "@/components/SidebarMenu"; // Ensure this path is correct
+import Navbar from "/components/navbar"; // Ensure this path is correct
+import SidebarMenu from "/components/SidebarMenu"; // Ensure this path is correct
 import '@fortawesome/fontawesome-free/css/all.css'; 
 
 const inter = Inter({ subsets: ["latin"] });

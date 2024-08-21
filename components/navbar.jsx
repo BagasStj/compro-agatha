@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import logo from "../public/logo.svg";
-import { menu } from "@/data/menu";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline"; // Import Heroicons
 
 const Navbar = () => {
@@ -67,16 +66,6 @@ const Navbar = () => {
             : "max-h-0 opacity-0"
         } lg:hidden flex flex-col items-center justify-center gap-8 text-center transition-all duration-700 ease-in-out overflow-hidden`}
       >
-        {menu.map((item, i) => (
-          <a
-            key={i}
-            href={item.url}
-            onClick={item.onClick}
-            className="block mt-4 text-white hover:text-white transition-colors duration-300"
-          >
-            {item.label}
-          </a>
-        ))}
       </div>
     </nav>
   );
