@@ -162,7 +162,7 @@ export default function FlowAI() {
                 </ul>
                 <ul className="list-decimal list-item-bold pl-10 mt-5 text-lg">
                   <li><strong>Prompt Clarity: </strong>Make sure you provide a clear and specific prompt before starting the call to get optimal results.</li>
-                  <li><strong>Natural Conversation: </strong>While the AI can respond well, try to speak clearly and slowly so that the AI ​​can process and respond correctly.</li>
+                  <li><strong>Natural Conversation: </strong>While the AI can respond well, try to speak clearly and slowly so that the AI can process and respond correctly.</li>
                 </ul>
                 <img
                 src="/elipse2.svg"
