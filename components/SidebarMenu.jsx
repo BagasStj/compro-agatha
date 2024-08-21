@@ -12,7 +12,7 @@ const SidebarMenu = () => {
     <div className="w-64 bg-transparent text-white min-h-screen p-4 fixed top-20 left-0">
       <ul className="space-y-4">
         <li>
-          <a href="#" className="hover:text-purple-400">
+          <a href="intro" className="hover:text-purple-400">
             Introduction
           </a>
         </li>
