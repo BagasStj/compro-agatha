@@ -2,14 +2,14 @@
 import Image from 'next/image';
 import React from 'react';
 
-export default function Home() {
+export default function ChatAI() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent text-white font-sans">
       {/* Hero Section */}
       <section id="home" className="p-8 bg-transparent mt-20">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl font-bold">AI Chat</h1>
-          <p className="mt-10 text-xl">
+          <p className="mt-10 text-lg">
             An AI Chat is an advanced tool designed to assist in various tasks related to data visualization and analysis using artificial intelligence. It can automatically generate charts based on data inputs, making it a powerful feature for data-driven projects. The AI Chart can be utilized in numerous industries where data visualization is crucial, including finance, marketing, and research.
           </p>
           <img

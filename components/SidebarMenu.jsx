@@ -37,17 +37,17 @@ const SidebarMenu = () => {
             {isFeatureUsageOpen && (
               <ul className="pl-4 mt-2 space-y-2">
                 <li>
-                  <a href="#" className="hover:text-purple-400">
+                  <a href="chatai" className="hover:text-purple-400">
                     AI Chat
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-purple-400">
+                  <a href="AIF" className="hover:text-purple-400">
                     AI Flow Diagram
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-purple-400">
+                  <a href="AI2" className="hover:text-purple-400">
                     AI Telephone
                   </a>
                 </li>
