@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from 'react';
 import Image from 'next/image';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaArrowUp } from 'react-icons/fa';
 
 export default function Home() {
   useEffect(() => {
@@ -48,7 +49,7 @@ export default function Home() {
               width: '700px',
               height: '700px',
               transform: 'translate(50%, -50%)',
-              zIndex: 0,
+              zIndex: 1,
             }}
           />
           <img src="/gambar-about.png" alt="Background" className="robot-image" />
@@ -281,86 +282,47 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="p-10 text-white mt-10 rounded-xl flex-col items-center justify-center" style={{ backgroundColor: '#2d2d2d' }}>
-        <div className="flex flex-wrap justify-center w-full">
-          {/* Kolom 1 */}
-          <div className="flex-1 text-left">
-            <h3 className="text-2xl font-bold">Header</h3>
-            <p className="text-xl mt-4" style={{ maxWidth: '500px' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare cursus sed nunc eget dictum. Sed ornare cursus sed nunc eget dictum.
-            </p>
-          </div>
-          {/* Wrapper untuk kolom 2, 3, dan 4 */}
-          <div className="flex flex-1 justify-between">
-            {/* Kolom 2 */}
-            <div className="text-left">
-              <h3 className="text-2xl font-bold">Header Text</h3>
-              <ul className="mt-4">
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-              </ul>
-            </div>
-            {/* Kolom 3 */}
-            <div className="text-left">
-              <h3 className="text-2xl font-bold">Header Text</h3>
-              <ul className="mt-4">
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-              </ul>
-            </div>
-            {/* Kolom 4 */}
-            <div className="text-left">
-              <h3 className="text-2xl font-bold">Header Text</h3>
-              <ul className="mt-4">
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img src="/arrow.svg" alt="Arrow Right" className="mr-2 w-4 h-4" />
-                  <a href="#" className="text-xl hover:underline">Button</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <footer className="bg-[#242424] text-white py-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 md:px-0">
+        <div className="flex flex-col">
+          <a href="#" className="text-xl font-semibold">
+            Agatha Apps
+            <i className="fas fa-arrow-right ml-2" style={{ transform: 'rotate(-45deg)', }}></i>
+          </a>
+          <a href="#" className="text-xl font-semibold">
+            Manual Guide
+            <i className="fas fa-arrow-right ml-2" style={{ transform: 'rotate(-45deg)', marginTop: '4px'}}></i>
+          </a>
+          <ul className="mt-4 space-y-2 text-gray-400">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Testimoni</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
         </div>
-      </footer>
+
+        <div className="col-span-1">
+          <h3 className="text-sm font-semibold text-gray-500">CONTACT US</h3>
+          <p className="mt-2 text-lg">+62 999 888-76-54</p>
+          <h3 className="mt-4 text-sm font-semibold text-gray-500">EMAIL</h3>
+          <p className="mt-2 text-gray-400">agatha@gmail.com</p>
+        </div>
+
+        <div className="col-span-1">
+          <h3 className="text-sm font-semibold text-gray-500">ADDRESS</h3>
+          <p className="mt-2 text-gray-400">
+            Sokaraja, Kec. Purwokerto, Jawa Tengah
+          </p>
+        </div>
+
+        <div className="col-span-1 flex flex-col items-end justify-between">
+          <button className="p-2 bg-gray-600 rounded-full">
+            <FaArrowUp />
+          </button>
+          <p className="text-sm text-gray-500">© 2023 — Copyright</p>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 }
