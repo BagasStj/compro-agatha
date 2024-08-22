@@ -289,7 +289,7 @@ export default function Home() {
             Agatha Apps
             <i className="fas fa-arrow-right ml-2" style={{ transform: 'rotate(-45deg)', }}></i>
           </a>
-          <a href="#" className="text-xl font-semibold">
+          <a href="https://manual-guide.vercel.app" className="text-xl font-semibold">
             Manual Guide
             <i className="fas fa-arrow-right ml-2" style={{ transform: 'rotate(-45deg)', marginTop: '4px'}}></i>
           </a>
