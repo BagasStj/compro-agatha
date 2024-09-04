@@ -302,16 +302,16 @@ export default function Home() {
         </div>
 
         <div className="col-span-1">
-          <h3 className="text-sm font-semibold text-gray-500">CONTACT US</h3>
-          <p className="mt-2 text-lg">+62 999 888-76-54</p>
+          <h3 className="text-sm font-semibold text-gray-500">Kontak yang bisa dihubungi : </h3>
+          <p className="mt-2 text-lg">+6289672865080</p>
           <h3 className="mt-4 text-sm font-semibold text-gray-500">EMAIL</h3>
           <p className="mt-2 text-gray-400">agatha@gmail.com</p>
         </div>
 
         <div className="col-span-1">
-          <h3 className="text-sm font-semibold text-gray-500">ADDRESS</h3>
+          <h3 className="text-sm font-semibold text-gray-500">Alamat Kantor : </h3>
           <p className="mt-2 text-gray-400">
-            Sokaraja, Kec. Purwokerto, Jawa Tengah
+           JL Raya Mujur no 45 Kroya Cilacap
           </p>
         </div>
 
