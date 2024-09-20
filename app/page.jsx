@@ -235,8 +235,9 @@ export default function Home() {
 
       <div class="container-video">
         <iframe class="responsive-iframe"
-          style={{ transform: 'translate(10000px, 0px);' }}
+          // style={{ transform: 'translate(10000px, 0px);' }}
           src="https://drive.google.com/file/d/1_4-bIX5w7sevni3X52u8K_Um6VEw-U2H/preview"
+          // allow="autoplay"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
