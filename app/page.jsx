@@ -1,9 +1,18 @@
 "use client";
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaArrowUp } from 'react-icons/fa';
 
 export default function Home() {
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.src = "https://drive.google.com/uc?export=download&id=1_4-bIX5w7sevni3X52u8K_Um6VEw-U2H";
+    }
+  }, []);
+
   useEffect(() => {
     const fadeElements = document.querySelectorAll('.fade-in');
 
@@ -30,7 +39,7 @@ export default function Home() {
   return (
     <div className="min-h-screen text-white font-sans">
       {/* Hero Section */}
-      <section id="home" className="flex flex-col md:flex-row items-center justify-between p-25 mt-40 fade-in">
+      <section id="home" className="flex flex-col md:flex-row items-center justify-between p-25  fade-in">
         <div className="welcome-text">
           <img src="/welcome.svg" alt="Welcome to AGATHA" className="svg-large" />
           <a href="#" className="try-button bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700">
@@ -58,26 +67,26 @@ export default function Home() {
       </section>
 
       {/* Introduction */}
-      <section id="intro" className="p-10 text-center mt-25 fade-in">
-        <h2 className="text-2xl font-bold mb-5 mt-40">
+      <section id="intro" className="p-10 text-center  fade-in">
+        <h2 className="text-2xl font-bold mb-5">
           <img src="/introduction.svg" alt="Icon" className="inline-block ml-2" />
         </h2>
         <p className="text-2xl mt-8">
           AGATHA (Adaptive Global Artificial Technology Hybrid Automation) is an innovative AI platform that transforms the way businesses operate with artificial intelligence. Designed to deliver adaptive, scalable, and globally applicable solutions, AGATHA improves efficiency and drives innovation across industries. Its focus on user empowerment and automation enables businesses to create AI workflows that fit their unique needs.
         </p>
         <img
-            src="/elipse2.svg"
-            alt="Lingkaran Detail"
-            className="absolute"
-            style={{
-              top: '-50%',
-              left: '-5%',
-              width: '700px',
-              height: '700px',
-              transform: 'translate(-50%, 50%)',
-              zIndex: -1,
-            }}
-          />
+          src="/elipse2.svg"
+          alt="Lingkaran Detail"
+          className="absolute"
+          style={{
+            top: '-50%',
+            left: '-5%',
+            width: '700px',
+            height: '700px',
+            transform: 'translate(-50%, 50%)',
+            zIndex: -1,
+          }}
+        />
       </section>
 
       {/* Vision & Mission */}
@@ -114,24 +123,24 @@ export default function Home() {
               <p className="mt-2">User Empowerment</p>
             </div>
             <img
-            src="/elipse.svg"
-            alt="Lingkaran Detail"
-            className="absolute"
-            style={{
-              top: '70%',
-              right: '-5%',
-              width: '700px',
-              height: '700px',
-              transform: 'translate(50%, -50%)',
-              zIndex: 0,
-            }}
-          />
+              src="/elipse.svg"
+              alt="Lingkaran Detail"
+              className="absolute"
+              style={{
+                top: '70%',
+                right: '-5%',
+                width: '700px',
+                height: '700px',
+                transform: 'translate(50%, -50%)',
+                zIndex: 0,
+              }}
+            />
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <h2 id="fitur" className="text-2xl font-bold mb-4 text-center mb-8 mt-40 fade-in">
+      <h2 id="fitur" className="text-2xl font-bold mb-4 text-center mt-40 fade-in">
         <img src="/feature.svg" alt="Icon" className="inline-block ml-2" />
       </h2>
 
@@ -178,13 +187,13 @@ export default function Home() {
               height: '700px',
               transform: 'translate(-50%, 50%)',
               zIndex: -1,
-              }}
-            />
+            }}
+          />
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <h2 className="text-2xl font-bold mb-8 text-center mt-80 mb-10 fade-in">
+      <h2 className="text-2xl font-bold mb-8 text-center mt-80  fade-in">
         <img
           src="/elipse.svg"
           alt="Lingkaran Detail"
@@ -196,7 +205,7 @@ export default function Home() {
             height: '700px',
             transform: 'translate(50%, -50%)',
             zIndex: 0,
-            }}
+          }}
         />
         <img src="/choose.svg" alt="Icon" className="inline-block ml-2" />
       </h2>
@@ -205,25 +214,63 @@ export default function Home() {
       <section className="features-section rounded-xl mt-8 mb-20 fade-in">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-3xl font-bold mt-4 mb-2 text-left mb-5">User-Friendliness</h3>
+            <h3 className="text-3xl font-bold mt-4 mb-2 text-left">User-Friendliness</h3>
             <p className="text-left">The intuitive interface makes it easy for all users, even without a technical background, to take full advantage of our application&apos;s capabilities.</p>
             <div className="border-b-2 border-white p-4 w-full"></div>
           </div>
           <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-3xl font-bold mt-4 mb-2 text-left mb-5">Superior Intelligence</h3>
+            <h3 className="text-3xl font-bold mt-4 mb-2 text-left ">Superior Intelligence</h3>
             <p className="text-left">Our AI applications are designed with state-of-the-art technology that can process data quickly and accurately. This allows you to make better and faster decisions.</p>
             <div className="border-b-2 border-white p-4 w-full"></div>
           </div>
           <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-3xl font-bold mt-4 mb-2 text-left mb-5">Security Guaranteed</h3>
+            <h3 className="text-3xl font-bold mt-4 mb-2 text-left">Security Guaranteed</h3>
             <p className="text-left">We prioritize your data security by using the latest security protocols that protect your business information from cyber threats.</p>
             <div className="border-b-2 border-white p-4 w-full"></div>
           </div>
         </div>
       </section>
+      {/* video */}
+
+
+      <div class="container-video">
+        <iframe class="responsive-iframe"
+          style={{ transform: 'translate(10000px, 0px);' }}
+          src="https://drive.google.com/file/d/1_4-bIX5w7sevni3X52u8K_Um6VEw-U2H/preview"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      {/* <div style={{ position: 'relative', width: '100%', height: '0', paddingBottom: '56.25%' }}>
+        <iframe
+           style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+          className='iframe-video'
+          src="https://drive.google.com/file/d/1_4-bIX5w7sevni3X52u8K_Um6VEw-U2H/preview"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div> */}
+      {/* <section id="video" className="p-5 bg-black text-white mt-20 mb-60 fade-in">
+        <div className="container mx-auto">
+          <div className="aspect-w-16 aspect-h-9">
+          </div>
+        </div>
+      </section> */}
+
 
       {/* Testimoni */}
-      <section id="testi" className="background-testi p-5 bg-black text-white mt-20 mb-60 fade-in">
+      {/* <section id="testi" className="background-testi p-5 bg-black text-white mt-20 mb-60 fade-in">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="testimonial-card bg-white text-black p-6 rounded-lg shadow-md">
             <p className="mb-1 text-center">&quot;I&apos;ve been using this web hosting service for a few months now and overall it&apos;s been fine. The uptime has been good and I haven&apos;t had any major issues.&quot;</p>
@@ -279,50 +326,50 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
-      <footer className="bg-[#242424] text-white py-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 md:px-0">
-        <div className="flex flex-col">
-          <a href="#" className="text-xl font-semibold">
-            Agatha Apps
-            <i className="fas fa-arrow-right ml-2" style={{ transform: 'rotate(-45deg)', }}></i>
-          </a>
-          <a href="https://manual-guide.vercel.app" className="text-xl font-semibold">
-            Manual Guide
-            <i className="fas fa-arrow-right ml-2" style={{ transform: 'rotate(-45deg)', marginTop: '4px'}}></i>
-          </a>
-          <ul className="mt-4 space-y-2 text-gray-400">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Testimoni</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
+      <footer className="bg-[#242424] w-full text-white py-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 md:px-0">
+          <div className="flex flex-col">
+            <a href="#" className="text-xl font-semibold">
+              Agatha Apps
+              <i className="fas fa-arrow-right ml-2" style={{ transform: 'rotate(-45deg)', }}></i>
+            </a>
+            <a href="https://manual-guide.vercel.app" className="text-xl font-semibold">
+              Manual Guide
+              <i className="fas fa-arrow-right ml-2" style={{ transform: 'rotate(-45deg)', marginTop: '4px' }}></i>
+            </a>
+            <ul className="mt-4 space-y-2 text-gray-400">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Testimoni</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
 
-        <div className="col-span-1">
-          <h3 className="text-sm font-semibold text-gray-500">Kontak yang bisa dihubungi : </h3>
-          <p className="mt-2 text-lg">+6289672865080</p>
-          <h3 className="mt-4 text-sm font-semibold text-gray-500">EMAIL</h3>
-          <p className="mt-2 text-gray-400">agatha@gmail.com</p>
-        </div>
+          <div className="col-span-1">
+            <h3 className="text-sm font-semibold text-gray-500">Kontak yang bisa dihubungi : </h3>
+            <p className="mt-2 text-lg">+6289672865080</p>
+            <h3 className="mt-4 text-sm font-semibold text-gray-500">EMAIL</h3>
+            <p className="mt-2 text-gray-400">agatha@gmail.com</p>
+          </div>
 
-        <div className="col-span-1">
-          <h3 className="text-sm font-semibold text-gray-500">Alamat Kantor : </h3>
-          <p className="mt-2 text-gray-400">
-           JL Raya Mujur no 45 Kroya Cilacap
-          </p>
-        </div>
+          <div className="col-span-1">
+            <h3 className="text-sm font-semibold text-gray-500">Alamat Kantor : </h3>
+            <p className="mt-2 text-gray-400">
+              JL Raya Mujur no 45 Kroya Cilacap
+            </p>
+          </div>
 
-        <div className="col-span-1 flex flex-col items-end justify-between">
-          <button className="p-2 bg-gray-600 rounded-full">
-            <FaArrowUp />
-          </button>
-          <p className="text-sm text-gray-500">© 2023 — Copyright</p>
+          <div className="col-span-1 flex flex-col items-end justify-between">
+            <button className="p-2 bg-gray-600 rounded-full">
+              <FaArrowUp />
+            </button>
+            <p className="text-sm text-gray-500">© 2023 — Copyright</p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
     </div>
   );
 }

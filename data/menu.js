@@ -33,17 +33,17 @@ export const menu = [
         }
       },
     },
-    {
-      label: 'Testimoni',
-      url: '#testi', // Scroll ke elemen dengan ID 'testimonials'
-      onClick: (e) => {
-        e.preventDefault(); // Mencegah tindakan default
-        const element = document.getElementById('testi');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' }); // Scroll smooth ke elemen
-        }
-      },
-    },
+    // {
+    //   label: 'Testimoni',
+    //   url: '#testi', // Scroll ke elemen dengan ID 'testimonials'
+    //   onClick: (e) => {
+    //     e.preventDefault(); // Mencegah tindakan default
+    //     const element = document.getElementById('testi');
+    //     if (element) {
+    //       element.scrollIntoView({ behavior: 'smooth' }); // Scroll smooth ke elemen
+    //     }
+    //   },
+    // },
     {
       label: 'Contact Us',
       url: '#contact', // Scroll ke elemen dengan ID 'contact'
