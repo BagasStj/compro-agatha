@@ -146,36 +146,72 @@ export default function Home() {
 
       {/* Container untuk fitur-fitur */}
       <section className="features-section text-center rounded-xl mt-12 mb-5 fade-in">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-start justify-center p-8">
-            <Image src="/chat.png" alt="chat-ai" width={60} height={50} />
-            <h3 className="text-xl font-bold mt-4 mb-2 text-left">Chat AI</h3>
-            <p>Makes it easier to use with the help of AI</p>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className=" items-start justify-center p-8 space-y-4">
+            <div className='flex items-center justify-center'>
+              <img src="/chat.png" alt="chat-ai" width={60} height={50} />
+            </div>
+            <h3 className="text-xl font-bold mt-4 mb-2 text-center"> AI Chat</h3>
+            <p>MThis feature allows users to ask questions on any topic, providing quick and accurate answers, helping users find solutions without searching extensively.</p>
           </div>
-          <div className="flex flex-col items-start justify-center p-8 border-l-2 border-r-2 border-white">
-            <Image src="/flow.png" alt="flow" width={70} height={50} />
-            <h3 className="text-xl font-bold mb-2 mt-1">AI Flow Diagram</h3>
-            <p>Facilitate the creation of flow diagrams with the help of AI</p>
+          <div className=" items-start j  ustify-center p-8 border-l-2 border-r-2 border-white space-y-4">
+            <div className='flex items-center justify-center'>
+              <img src="/flow.png" alt="flow" width={70} height={50} />
+            </div>
+            <h3 className="text-xl font-bold mb-2 mt-1 text-center">AI Flow </h3>
+            <p>Simplify development and business processes by creating customizable workflows that automate complex tasks, streamlining your operations with ease.</p>
           </div>
-          <div className="flex flex-col items-start justify-center p-8">
-            <Image src="/phone.png" alt="phone" width={60} height={50} />
-            <h3 className="text-xl font-bold mb-2 mt-2">AI Phone</h3>
-            <p>Can communicate with AI via phone</p>
+          <div className=" items-start justify-center p-8 border-r-2 border-white space-y-4">
+            <div className='flex items-center justify-center'>
+              <img src="/phone.png" alt="phone" width={60} height={50} />
+            </div>
+            <h3 className="text-xl font-bold mb-2 mt-2 text-center">AI Phone</h3>
+            <p>Improve customer service efficiency by automating responses to frequently asked questions through an intelligent phone system.</p>
+          </div>
+          <div className=" items-start justify-center p-8 space-y-4">
+            <div className='flex items-center justify-center'>
+              <img src="/reminder.svg" alt="phone" width={60} height={50} />
+            </div>
+            <h3 className="text-xl font-bold mb-2 mt-2 text-center">AI Reminder</h3>
+            <p>Send timely notifications and updates to users, ensuring they never miss important schedules or deadlines.</p>
           </div>
         </div>
       </section>
 
-      {/* Amaze */}
+      
+
       <section className="transparent-svg rounded-xl pt-1 fade-in">
         <div className="container mx-auto bg-transparent">
-          <Image
-            src="/amaze.svg"
-            alt="Feature Image"
-            layout="responsive"
-            width={500}
-            height={340}
-            className="transparent-svg"
-          />
+         {/* Amaze */}
+      <section>
+        <div className=' grid-cols-2 flex justify-between'>
+          <div>
+            <div className='text-start text-[6vh] font-extrabold leading-[1.2] w-[32vw] break-words mb-10' style={{ fontFamily: 'sans-serif' }}>Feature that amazed our visitors</div>
+            <div className="flex flex-col space-y-10">
+              <div className="flex items-center w-[35vw] h-[10vh]">
+                <img src="/icon-ai-3.svg" alt="AI Icon" className="w-16 h-16 mr-6" />
+                <p className="text-xl"> Engage in interactive chats and customize prompts for a personalized conversation experience</p>
+              </div>
+              <div className="flex items-center w-[35vw] h-[10vh]">
+                <img src="/link-icon.svg" alt="Link Icon" className="w-16 h-16 mr-6" />
+                <p className="text-xl">Effortlessly design unique workflows by integrating URL links and creating tailored prompts to enhance automation.</p>
+              </div>
+              <div className="flex items-center w-[35vw] h-[10vh]">
+                <img src="/icon-ai-2.svg" alt="Phone Icon" className="w-16 h-16 mr-6" />
+                <p className="text-xl"> Elevate customer interactions with scheduled Q&A sessions via phone, ensuring timely responses when needed.</p>
+              </div>
+              <div className="flex items-center w-[35vw] h-[10vh]">
+                <img src="/icon-ai-1.svg" alt="Phone Icon" className="w-16 h-16 mr-6" />
+                <p className="text-xl">Stay organized with automatic reminders for important dates and tasks, keeping you updated and on track.</p>
+              </div>
+
+            </div>
+          </div>
+          <div>
+            <img src='/test-img-all.png' className='h-[71vh] object-cover'></img>
+          </div>
+        </div>
+      </section>
           <img
             src="/elipse2.svg"
             alt="Lingkaran Detail"
@@ -344,22 +380,21 @@ export default function Home() {
             <ul className="mt-4 space-y-2 text-gray-400">
               <li><a href="#">About</a></li>
               <li><a href="#">Features</a></li>
-              <li><a href="#">Testimoni</a></li>
               <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
 
           <div className="col-span-1">
-            <h3 className="text-sm font-semibold text-gray-500">Kontak yang bisa dihubungi : </h3>
+            <h3 className="text-sm font-semibold text-gray-500">Contact : </h3>
             <p className="mt-2 text-lg">+6289672865080</p>
             <h3 className="mt-4 text-sm font-semibold text-gray-500">EMAIL</h3>
             <p className="mt-2 text-gray-400">agatha@gmail.com</p>
           </div>
 
           <div className="col-span-1">
-            <h3 className="text-sm font-semibold text-gray-500">Alamat Kantor : </h3>
+            <h3 className="text-sm font-semibold text-gray-500">Office Address : </h3>
             <p className="mt-2 text-gray-400">
-              JL Raya Mujur no 45 Kroya Cilacap
+              Mujur Street No. 45, Kroya, Cilacap
             </p>
           </div>
 
@@ -367,7 +402,6 @@ export default function Home() {
             <button className="p-2 bg-gray-600 rounded-full">
               <FaArrowUp />
             </button>
-            <p className="text-sm text-gray-500">© 2023 — Copyright</p>
           </div>
         </div>
       </footer>
