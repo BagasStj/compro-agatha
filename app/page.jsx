@@ -39,19 +39,19 @@ export default function Home() {
   return (
     <div className="min-h-screen text-white font-sans">
       {/* Hero Section */}
-      <section id="home" className="flex flex-col md:flex-row items-center justify-between p-25  fade-in">
-        <div className="welcome-text">
-          <img src="/welcome.svg" alt="Welcome to AGATHA" className="svg-large" />
-          <a href="#" className="try-button bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700">
+      <section id="home" className="flex flex-col md:flex-row items-center justify-between p-4 md:p-25 fade-in">
+        <div className="welcome-text w-full md:w-auto mb-8 md:mb-0">
+          <img src="/welcome.svg" alt="Welcome to AGATHA" className=" h-[20vh] w-full md:w-auto md:h-[58vh]" />
+          <a href="#" className="try-button bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 mt-4 inline-block">
             Try It For Free
             <i className="fas fa-arrow-right ml-2" style={{ transform: 'rotate(-45deg)', display: 'inline-block' }}></i>
           </a>
         </div>
-        <div className="robot-container relative w-full">
+        <div className="robot-container relative w-full md:w-900px">
           <img
             src="/elipse.svg"
             alt="Lingkaran Detail"
-            className="absolute"
+            className="absolute hidden md:block"
             style={{
               top: '70%',
               right: '-5%',
@@ -61,23 +61,23 @@ export default function Home() {
               zIndex: 1,
             }}
           />
-          <img src="/gambar-about.png" alt="Background" className="robot-image" />
-          <img src="/belakang-robot.png" alt="Robot" className="background-image" />
+          <img src="/gambar-about.png" alt="Background" className="robot-image w-full md:w-auto" />
+          <img src="/belakang-robot.png" alt="Robot" className="background-image w-full md:w-auto" />
         </div>
       </section>
 
       {/* Introduction */}
-      <section id="intro" className="p-10 text-center  fade-in">
+      <section id="intro" className="p-4 md:p-10 text-center fade-in">
         <h2 className="text-2xl font-bold mb-5">
           <img src="/introduction.svg" alt="Icon" className="inline-block ml-2" />
         </h2>
-        <p className="text-2xl mt-8">
+        <p className="text-lg md:text-2xl mt-8">
           AGATHA (Adaptive Global Artificial Technology Hybrid Automation) is an innovative AI platform that transforms the way businesses operate with artificial intelligence. Designed to deliver adaptive, scalable, and globally applicable solutions, AGATHA improves efficiency and drives innovation across industries. Its focus on user empowerment and automation enables businesses to create AI workflows that fit their unique needs.
         </p>
         <img
           src="/elipse2.svg"
           alt="Lingkaran Detail"
-          className="absolute"
+          className="absolute hidden md:block"
           style={{
             top: '-50%',
             left: '-5%',
@@ -90,42 +90,42 @@ export default function Home() {
       </section>
 
       {/* Vision & Mission */}
-      <section id="vision-mission" className="text-center fade-in mt-12">
+      <section id="vision-mission" className="text-center fade-in mt-8 md:mt-12">
         <h2 className="text-2xl font-bold mb-4">
           <img src="/vision.svg" alt="Icon" className="inline-block ml-2" />
         </h2>
-        <p className="text-2xl mb-8 mt-8">
+        <p className="text-lg md:text-2xl mb-8 mt-8">
           &quot;To provide innovative solutions that empower businesses and individuals to achieve maximum efficiency and sustainable progress, with the ability for users to create and customize their own workflows.&quot;
         </p>
-        <h2 className="text-2xl font-bold mb-4 mt-40">
+        <h2 className="text-2xl font-bold mb-4 mt-8 md:mt-40">
           <img src="/mission.svg" alt="Icon" className="inline-block ml-2" />
         </h2>
         <div className="container mt-8 p-6">
-          <div className="flex justify-center space-x-12">
-            <div className="flex flex-col items-center text-center fade-in">
+          <div className="flex flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-12">
+            <div className="flex flex-col items-center text-center fade-in w-1/2 md:w-auto">
               <Image src="/commitment.png" alt="Quality" width={67} height={50} />
               <p className="mt-2">Commitment to quality</p>
             </div>
-            <div className="flex flex-col items-center text-center fade-in">
+            <div className="flex flex-col items-center text-center fade-in w-1/2 md:w-auto">
               <Image src="/education.png" alt="Education" width={86} height={50} />
               <p className="mt-2">Education and training</p>
             </div>
-            <div className="flex flex-col items-center text-center fade-in">
+            <div className="flex flex-col items-center text-center fade-in w-1/2 md:w-auto">
               <Image src="/collab.png" alt="Collaboration" width={69} height={60} />
               <p className="mt-2">Collaboration and partnership</p>
             </div>
-            <div className="flex flex-col items-center text-center fade-in">
+            <div className="flex flex-col items-center text-center fade-in w-1/2 md:w-auto">
               <Image src="/innovation.png" alt="Innovation" width={60} height={50} />
               <p className="mt-2">Cutting edge innovation</p>
             </div>
-            <div className="flex flex-col items-center text-center fade-in">
+            <div className="flex flex-col items-center text-center fade-in w-1/2 md:w-auto">
               <Image src="/user.png" alt="User-1" width={95} height={50} />
               <p className="mt-2">User Empowerment</p>
             </div>
             <img
               src="/elipse.svg"
               alt="Lingkaran Detail"
-              className="absolute"
+              className="absolute hidden md:block"
               style={{
                 top: '70%',
                 right: '-5%',
@@ -140,35 +140,35 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <h2 id="fitur" className="text-2xl font-bold mb-4 text-center mt-40 fade-in">
+      <h2 id="fitur" className="text-2xl font-bold mb-4 text-center mt-8 md:mt-40 fade-in">
         <img src="/feature.svg" alt="Icon" className="inline-block ml-2" />
       </h2>
 
       {/* Container untuk fitur-fitur */}
-      <section className="features-section text-center rounded-xl mt-12 mb-5 fade-in">
+      <section className="features-section text-center rounded-xl mt-8 md:mt-12 mb-5 fade-in">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className=" items-start justify-center p-8 space-y-4">
+          <div className="items-start justify-center p-8 space-y-4">
             <div className='flex items-center justify-center'>
               <img src="/chat.png" alt="chat-ai" width={60} height={50} />
             </div>
             <h3 className="text-xl font-bold mt-4 mb-2 text-center"> AI Chat</h3>
-            <p>MThis feature allows users to ask questions on any topic, providing quick and accurate answers, helping users find solutions without searching extensively.</p>
+            <p>This feature allows users to ask questions on any topic, providing quick and accurate answers, helping users find solutions without searching extensively.</p>
           </div>
-          <div className=" items-start j  ustify-center p-8 border-l-2 border-r-2 border-white space-y-4">
+          <div className="items-start justify-center p-8 md:border-l-2 md:border-r-2 border-white space-y-4">
             <div className='flex items-center justify-center'>
               <img src="/flow.png" alt="flow" width={70} height={50} />
             </div>
             <h3 className="text-xl font-bold mb-2 mt-1 text-center">AI Flow </h3>
             <p>Simplify development and business processes by creating customizable workflows that automate complex tasks, streamlining your operations with ease.</p>
           </div>
-          <div className=" items-start justify-center p-8 border-r-2 border-white space-y-4">
+          <div className="items-start justify-center p-8 md:border-r-2 border-white space-y-4">
             <div className='flex items-center justify-center'>
               <img src="/phone.png" alt="phone" width={60} height={50} />
             </div>
             <h3 className="text-xl font-bold mb-2 mt-2 text-center">AI Phone</h3>
             <p>Improve customer service efficiency by automating responses to frequently asked questions through an intelligent phone system.</p>
           </div>
-          <div className=" items-start justify-center p-8 space-y-4">
+          <div className="items-start justify-center p-8 space-y-4">
             <div className='flex items-center justify-center'>
               <img src="/reminder.svg" alt="phone" width={60} height={50} />
             </div>
@@ -178,44 +178,53 @@ export default function Home() {
         </div>
       </section>
 
-      
-
-      <section className="transparent-svg rounded-xl pt-1 fade-in">
-        <div className="container mx-auto bg-transparent">
-         {/* Amaze */}
-      <section>
-        <div className=' grid-cols-2 flex justify-between'>
-          <div>
-            <div className='text-start text-[6vh] font-extrabold leading-[1.2] w-[32vw] break-words mb-10' style={{ fontFamily: 'sans-serif' }}>Feature that amazed our visitors</div>
-            <div className="flex flex-col space-y-10">
-              <div className="flex items-center w-[35vw] h-[10vh]">
-                <img src="/icon-ai-3.svg" alt="AI Icon" className="w-16 h-16 mr-6" />
-                <p className="text-xl"> Engage in interactive chats and customize prompts for a personalized conversation experience</p>
+      <section className="md:transparent-svg mb-0 w-full h-full rounded-xl pt-1 md:mb-[1vh] fade-in">
+        <div className="bg-transparent  md:px-0">
+          {/* Amaze */}
+          <div className=" md:py-16">
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16'>
+              <div className="px-4 md:px-0">
+                <h2 className='text-start text-2xl md:text-[6vh] font-extrabold leading-tight md:leading-[1.2] w-full md:w-[32vw] break-words mb-6 md:mb-10' style={{ fontFamily: 'sans-serif' }}>Feature that amazed our visitors</h2>
+                <div className="flex flex-col space-y-6 md:space-y-10">
+                  <div className="flex items-start w-full md:w-[35vw]">
+                    <img src="/icon-ai-3.svg" alt="AI Icon" className="w-8 h-8 md:w-16 md:h-16 mr-4 md:mr-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-base md:text-xl font-semibold mb-1 md:mb-2">Interactive Chats</h3>
+                      <p className="text-xs md:text-base">Engage in interactive chats and customize prompts for a personalized conversation experience</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start w-full md:w-[35vw]">
+                    <img src="/link-icon.svg" alt="Link Icon" className="w-8 h-8 md:w-16 md:h-16 mr-4 md:mr-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-base md:text-xl font-semibold mb-1 md:mb-2">Unique Workflows</h3>
+                      <p className="text-xs md:text-base">Effortlessly design unique workflows by integrating URL links and creating tailored prompts to enhance automation.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start w-full md:w-[35vw]">
+                    <img src="/icon-ai-2.svg" alt="Phone Icon" className="w-8 h-8 md:w-16 md:h-16 mr-4 md:mr-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-base md:text-xl font-semibold mb-1 md:mb-2">Scheduled Q&A</h3>
+                      <p className="text-xs md:text-base">Elevate customer interactions with scheduled Q&A sessions via phone, ensuring timely responses when needed.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start w-full md:w-[35vw]">
+                    <img src="/icon-ai-1.svg" alt="Reminder Icon" className="w-8 h-8 md:w-16 md:h-16 mr-4 md:mr-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-base md:text-xl font-semibold mb-1 md:mb-2">Automatic Reminders</h3>
+                      <p className="text-xs md:text-base">Stay organized with automatic reminders for important dates and tasks, keeping you updated and on track.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center w-[35vw] h-[10vh]">
-                <img src="/link-icon.svg" alt="Link Icon" className="w-16 h-16 mr-6" />
-                <p className="text-xl">Effortlessly design unique workflows by integrating URL links and creating tailored prompts to enhance automation.</p>
+              <div className="mt-8 md:mt-0 px-4 md:px-0">
+                <img src='/test-img-all.png' className='h-auto w-full object-cover rounded-lg shadow-lg scale-[0.9]' alt="Features" />
               </div>
-              <div className="flex items-center w-[35vw] h-[10vh]">
-                <img src="/icon-ai-2.svg" alt="Phone Icon" className="w-16 h-16 mr-6" />
-                <p className="text-xl"> Elevate customer interactions with scheduled Q&A sessions via phone, ensuring timely responses when needed.</p>
-              </div>
-              <div className="flex items-center w-[35vw] h-[10vh]">
-                <img src="/icon-ai-1.svg" alt="Phone Icon" className="w-16 h-16 mr-6" />
-                <p className="text-xl">Stay organized with automatic reminders for important dates and tasks, keeping you updated and on track.</p>
-              </div>
-
             </div>
           </div>
-          <div>
-            <img src='/test-img-all.png' className='h-[71vh] object-cover'></img>
-          </div>
-        </div>
-      </section>
           <img
             src="/elipse2.svg"
             alt="Lingkaran Detail"
-            className="absolute"
+            className="absolute hidden md:block"
             style={{
               top: '-70%',
               left: '-5%',
@@ -229,11 +238,11 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <h2 className="text-2xl font-bold mb-8 text-center mt-80  fade-in">
+      <h2 className="text-2xl font-bold mb-8 text-center  fade-in">
         <img
           src="/elipse.svg"
           alt="Lingkaran Detail"
-          className="absolute"
+          className="absolute hidden md:block"
           style={{
             top: '500%',
             right: '-5%',
@@ -247,123 +256,33 @@ export default function Home() {
       </h2>
 
       {/* Container */}
-      <section className="features-section rounded-xl mt-8 mb-20 fade-in">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-3xl font-bold mt-4 mb-2 text-left">User-Friendliness</h3>
-            <p className="text-left">The intuitive interface makes it easy for all users, even without a technical background, to take full advantage of our application&apos;s capabilities.</p>
-            <div className="border-b-2 border-white p-4 w-full"></div>
+      <section className="features-section rounded-xl md:h-max mt-8 mb-20 fade-in px-4 md:px-0 md:flex md:justify-center md:items-center md:w-[100%]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:h-[24vh] md:w-[75vw]">
+          <div className="flex flex-col items-start justify-center p-4 bg-opacity-10 bg-white rounded-lg">
+            <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-10">User-Friendliness</h3>
+            <p className="text-xs md:text-base">The intuitive interface makes it easy for all users, even without a technical background, to take full advantage of our application's capabilities.</p>
           </div>
-          <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-3xl font-bold mt-4 mb-2 text-left ">Superior Intelligence</h3>
-            <p className="text-left">Our AI applications are designed with state-of-the-art technology that can process data quickly and accurately. This allows you to make better and faster decisions.</p>
-            <div className="border-b-2 border-white p-4 w-full"></div>
+          <div className="flex flex-col items-start justify-center p-4 bg-opacity-10 bg-white rounded-lg">
+            <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-10">Superior Intelligence</h3>
+            <p className="text-xs md:text-base">Our AI applications are designed with state-of-the-art technology that can process data quickly and accurately. This allows you to make better and faster decisions.</p>
           </div>
-          <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-3xl font-bold mt-4 mb-2 text-left">Security Guaranteed</h3>
-            <p className="text-left">We prioritize your data security by using the latest security protocols that protect your business information from cyber threats.</p>
-            <div className="border-b-2 border-white p-4 w-full"></div>
+          <div className="flex flex-col items-start justify-center p-4 bg-opacity-10 bg-white rounded-lg">
+            <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-10">Security Guaranteed</h3>
+            <p className="text-xs md:text-base">We prioritize your data security by using the latest security protocols that protect your business information from cyber threats.</p>
           </div>
         </div>
       </section>
+
       {/* video */}
-
-
-      <div class="container-video">
-        <iframe class="responsive-iframe"
-          // style={{ transform: 'translate(10000px, 0px);' }}
+      <div className="container-video">
+        <iframe className="responsive-iframe"
           src="https://drive.google.com/file/d/1_4-bIX5w7sevni3X52u8K_Um6VEw-U2H/preview"
-          // allow="autoplay"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         ></iframe>
       </div>
-
-      {/* <div style={{ position: 'relative', width: '100%', height: '0', paddingBottom: '56.25%' }}>
-        <iframe
-           style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-          }}
-          className='iframe-video'
-          src="https://drive.google.com/file/d/1_4-bIX5w7sevni3X52u8K_Um6VEw-U2H/preview"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div> */}
-      {/* <section id="video" className="p-5 bg-black text-white mt-20 mb-60 fade-in">
-        <div className="container mx-auto">
-          <div className="aspect-w-16 aspect-h-9">
-          </div>
-        </div>
-      </section> */}
-
-
-      {/* Testimoni */}
-      {/* <section id="testi" className="background-testi p-5 bg-black text-white mt-20 mb-60 fade-in">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="testimonial-card bg-white text-black p-6 rounded-lg shadow-md">
-            <p className="mb-1 text-center">&quot;I&apos;ve been using this web hosting service for a few months now and overall it&apos;s been fine. The uptime has been good and I haven&apos;t had any major issues.&quot;</p>
-            <div className="flex justify-center mt-40 mb-4">
-              <span className="text-[#7A58FF] text-xl">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                </span>
-            </div>
-            <div className="flex flex-col items-center mt-50">
-              <Image src="/gb-testi.png" alt="Jane Smith" width={50} height={50} className="rounded-full" />
-              <h4 className="font-bold mt-3">Jane Smith</h4>
-              <p className="text-sm text-gray-500">Freelance Designer</p>
-            </div>
-          </div>
-
-          <div className="testimonial-card bg-white text-black p-9 rounded-lg shadow-md">
-            <p className="mb-20 text-center">&quot;The pricing is also reasonable. Nothing particularly stands out as exceptional, but it gets the job done.&quot;</p>
-            <div className="flex justify-center mt-40 mb-4">
-              <span className="mt-5 text-[#7A58FF] text-xl">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i> 
-              </span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image src="/gb-testi.png" alt="Tom Williams" width={50} height={50} className="rounded-full" />
-              <h4 className="font-bold mt-4">Tom Williams</h4>
-              <p className="text-sm text-gray-500">Software Developer</p>
-            </div>
-          </div>
-
-          <div className="testimonial-card bg-white text-black p-6 rounded-lg shadow-md">
-            <p className="mb-4 text-center">&quot;My website has gone down multiple times and the customer service has been unresponsive. I would not recommend this company.&quot;</p>
-            <div className="flex justify-center mt-40 mb-4">
-              <span className="text-[#7A58FF] text-xl">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              </span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image src="/gb-testi.png" alt="Michael Brown" width={50} height={50} className="rounded-full" />
-              <h4 className="font-bold mt-4">Michael Brown</h4>
-              <p className="text-sm text-gray-500">Entrepreneur</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* Footer */}
       <footer className="bg-[#242424] w-full text-white py-8">
