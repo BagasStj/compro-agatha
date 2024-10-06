@@ -260,7 +260,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:h-[24vh] md:w-[75vw]">
           <div className="flex flex-col items-start justify-center p-4 bg-opacity-10 bg-white rounded-lg">
             <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-10">User-Friendliness</h3>
-            <p className="text-xs md:text-base">The intuitive interface makes it easy for all users, even without a technical background, to take full advantage of our application's capabilities.</p>
+            <p className="text-xs md:text-base">The intuitive interface makes it easy for all users, even without a technical background, to take full advantage of our application&apos;s capabilities.</p>
           </div>
           <div className="flex flex-col items-start justify-center p-4 bg-opacity-10 bg-white rounded-lg">
             <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-10">Superior Intelligence</h3>
